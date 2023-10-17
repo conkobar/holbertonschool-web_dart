@@ -1,4 +1,7 @@
 // takes list of doubles and converts them to fahrenheit
 List<double> convertToF(List<double> temperaturesInC) {
-  return temperaturesInC.map((tempInC) => (tempInC * 9/5) + 32).toList();
+  var tempsInF = temperaturesInC.map(
+    (celsius) => double.parse(((celsius * 9 / 5) + 32).toStringAsFixed(2))
+  );
+  return tempsInF.toList();
 }
